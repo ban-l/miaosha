@@ -1,10 +1,10 @@
 # 如何应对高并发：缓存、异步、分布式
 
-![秒杀流程](D:\workspace\git\miaosha\assets\秒杀流程.png)
+![image](https://github.com/ban-l/miaosha/blob/main/assets/%E7%A7%92%E6%9D%80%E6%B5%81%E7%A8%8B.png)
 
-![image-20230806155814616](D:\workspace\git\miaosha\assets\image-20230806155814616.png)
+![image](https://github.com/ban-l/miaosha/blob/main/assets/image-20230806155814616.png)
 
-![系统](D:\workspace\git\miaosha\assets\系统.png)
+![image](https://github.com/ban-l/miaosha/blob/main/assets/%E7%B3%BB%E7%BB%9F.png)
 
 # 项目开发环境与框架搭建
 
@@ -949,7 +949,7 @@ Tomcat 的 BIO、NIO、APR 模式，默认 NIO 模式
 
 ## nginx
 
-![image-20230730155418442](D:\workspace\git\miaosha\assets\image-20230730155418442.png)
+![image](https://github.com/ban-l/miaosha/blob/main/assets/image-20230730155418442.png)
 
 反向代理
 
