@@ -212,7 +212,7 @@ service之间可以相互调用，service只能调用自己的dao
 - goods(商品)
 - miaosha_goods((**秒杀商品**)
 - miaosha_order(**秒杀订单**)，唯一索引（user_id、goods_id）
-  - ![image-20230723211642386](C:\Users\Ban\Desktop\assets\image-20230723211642386.png)
+  - ![image](https://github.com/ban-l/miaosha/blob/main/assets/%E5%94%AF%E4%B8%80%E7%B4%A2%E5%BC%95.png)
 - miaosha_user(**秒杀用户**)
   - 密码、salt
 - order_info(**订单信息**)
