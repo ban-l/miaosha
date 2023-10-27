@@ -1,10 +1,10 @@
 # 如何应对高并发：缓存、异步、分布式
 
-![image](https://github.com/ban-l/miaosha/blob/main/assets/%E7%A7%92%E6%9D%80%E6%B5%81%E7%A8%8B.png)
+![秒杀流程](assets/秒杀流程.png)
 
-![image](https://github.com/ban-l/miaosha/blob/main/assets/image-20230806155814616.png)
+![image-20230806155814616](assets/image-20230806155814616.png)
 
-![image](https://github.com/ban-l/miaosha/blob/main/assets/%E7%B3%BB%E7%BB%9F.png)
+![秒杀流程](assets/秒杀流程.png)
 
 # 项目开发环境与框架搭建
 
@@ -212,7 +212,7 @@ service之间可以相互调用，service只能调用自己的dao
 - goods(商品)
 - miaosha_goods((**秒杀商品**)
 - miaosha_order(**秒杀订单**)，唯一索引（user_id、goods_id）
-  - ![image](https://github.com/ban-l/miaosha/blob/main/assets/%E5%94%AF%E4%B8%80%E7%B4%A2%E5%BC%95.png)
+  - ![唯一索引](assets/唯一索引.png)
 - miaosha_user(**秒杀用户**)
   - 密码、salt
 - order_info(**订单信息**)
@@ -949,7 +949,7 @@ Tomcat 的 BIO、NIO、APR 模式，默认 NIO 模式
 
 ## nginx
 
-![image](https://github.com/ban-l/miaosha/blob/main/assets/image-20230730155418442.png)
+![image-20230730155418442](assets/image-20230730155418442.png)
 
 反向代理
 
