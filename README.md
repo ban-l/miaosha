@@ -1,6 +1,10 @@
 # 如何应对高并发：缓存、异步、分布式
 
-![秒杀流程](C:/Users/Ban/Desktop/assets/秒杀流程.png)
+![秒杀流程](assets/秒杀流程.png)
+
+![系统架构](assets/系统架构.png)
+
+![系统](assets/系统.png)
 
 # 项目开发环境与框架搭建
 
@@ -945,7 +949,7 @@ Tomcat 的 BIO、NIO、APR 模式，默认 NIO 模式
 
 ## nginx
 
-![image-20230730155418442](assets/image-20230730155418442.png)
+![nginx](assets/nginx.png)
 
 反向代理
 
