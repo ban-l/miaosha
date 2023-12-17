@@ -8,6 +8,8 @@
 
 # 项目开发环境与框架搭建
 
+
+
 ## 技术
 
 前端：Thymeleaf、Bootstrap、JQuery
@@ -65,27 +67,10 @@ resources
 
 
 
-## SpringBoot三种创建方式
-
-service之间可以相互调用，service只能调用自己的dao
-
-**前端页面-controller-service-dao-返回VO给前端**
-
-
-
 ## SpringBoot集成功能
 
 - pom.xml引入**dependency**
 - application.properties配置文件**添加配置**
-
-
-
-## Controller作用
-
-- REST API ，REST风格的HTTP接口
-  - **约定输出格式**，如json交互数据
-- 页面
-  - 返回String，表示页面名称
 
 
 
@@ -164,7 +149,7 @@ service之间可以相互调用，service只能调用自己的dao
   - @Mapper
 
   - @Select()、@Insert()、@Update()、@Delete()
-  
+
   - **参数获取方式：#{name}**
 - @Insert()，获取返回值
   - 用到**@SelectKey注解**
@@ -189,17 +174,17 @@ service之间可以相互调用，service只能调用自己的dao
 - Jedis连接池
 
 - 重写set、get方法
+
   - key-value
   - 过期时间（自定义0，永不过期）
   - 缓存中存储的数据大小不一、作用不同，为了区分不同作用的缓存，防止不同模块的key重复覆盖数据，在 key 值前加了标识
   - 真正的 Key 值为“**类名：prefix+key**”
-  
+
 - 重写incr（增加值）、decr（减少值）方法
+
   - 原子操作
   - 数值操作，加减1
   - 若是其它类型，默认为0，再加减1
-
-
 
 
 
@@ -518,7 +503,7 @@ public class UserArgumentResolver implements HandlerMethodArgumentResolver {
 
 
 
-## Cache Aside [Pattern](https://blog.csdn.net/tTU1EvLDeLFq5btqiK/article/details/78693323)
+## Cache Aside Pattern
 
 - 失效：应用程序先从cache取数据，没有得到，则从数据库中取数据，成功后，放到缓存中。
 - 命中：应用程序从cache中取数据，取到后返回。
@@ -568,23 +553,6 @@ public class UserArgumentResolver implements HandlerMethodArgumentResolver {
 - 不需要表单提交
 - 直接按钮 **onclick** ，ajax请求数据
 - post请求
-
-
-
-**get、post区别**
-
-- 传参方式，GET放在url后面，post放在http的body，GET参数直接暴露在 URL 中，传参更不安全
-- 参数长度，浏览器对url后面的参数长度有限制，post也有限制，但是post要比get大得多
-- GET的页面可以被缓存，添加收藏，POST不可以
-- GET可以后退刷新，POST刷新会重新提交数据
-- GET不能做文件上传，POST可以。
-- 以上都是表象，最根本的区别是**语义区别**：
-  - GET的语义是**请求获取指定的资源**
-    - GET方法是安全（不修改资源）、幂等、可缓存的（除非有 Cache-ControlHeader的约束）
-  - POST的语义是根据请求报文对**指定的资源做出处理**，具体的处理方式视资源类型而不同
-    - POST不安全（修改资源），不幂等，（大部分实现）不可缓存
-  - 简单地说**GET是获取数据，POST是修改数据**
-  - Restful规范里面，GET是获取，POST是添加，PUT是修改，DELETE是删除。
 
 
 
@@ -907,16 +875,9 @@ Http明文，url可以提前拿到，防止恶意刷接口
 
 ## 常见的限流算法
 
-常见的限流算法：
-
-最常用限流算法的就是使用**令牌桶或者漏斗桶算法**
-
-常见的实现方式：
-
 1. 在**网关**上做限流。比如在nginx上写lua脚本来实现
-2. 在应用上做**单机**限流。使用诸如基于Guava的RateLimiter令牌桶的方式。
-3. 在应用上做分布式限流。比如redisson提供了个基于redis的RateLimiter：
-4. https://github.com/redisson/redisson/wiki/6.-distributed-objects#612-ratelimiter
+2. 在应用上做**单机**限流。使用诸如基于Guava的RateLimiter令牌桶的方式
+3. 在应用上做分布式限流。比如redisson提供了个基于redis的RateLimiter
 5. 如果是SpringCloud项目，可用的就更多了，比如SpringCloud **Gateway**，Sentinel等等。
 
 
